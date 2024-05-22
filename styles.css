@@ -1,0 +1,48 @@
+/* CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #522f2f;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(36, 75, 148, 0.1);
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #54d2eb;
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+}
+
+.question-container {
+    margin-top: 20px;
+}
+
+.student-scores {
+    margin-top: 20px;
+}

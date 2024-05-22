@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLINE EXAMINATION SYSTEM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>ONLINE EXAMINATION SYSTEM</h2>
+        <div id="loginForm">
+            <h3>Student Login</h3>
+            <label for="studentName">Name:</label>
+            <input type="text" id="studentName">
+            <label for="studentRegNo">Registration Number:</label>
+            <input type="text" id="studentRegNo">
+            <button onclick="studentLogin()">Login</button>
+            <div id="studentErrorMessage" class="error" style="display: none;"></div>
+            
+            <h3>Examiner Login</h3>
+            <label for="examinerName">Name:</label>
+            <input type="text" id="examinerName">
+            <label for="examinerPassword">Password:</label>
+            <input type="password" id="examinerPassword">
+            <button onclick="examinerLogin()">Login</button>
+            <div id="examinerErrorMessage" class="error" style="display: none;"></div>
+        </div>
+        <div id="studentInterface" style="display: none;">
+            <!-- Questions and choices will be displayed here -->
+        </div>
+        <div id="examinerInterface" style="display: none;">
+            <h3>Welcome, Examiner</h3>
+            <button onclick="clearStudentScores()">Clear Student Scores</button>
+            <button onclick="exportStudentScores()">Export Student Scores</button>
+            <div class="question-form">
+                <h4>Add a Question</h4>
+                <label for="question">Question:</label>
+                <input type="text" id="question">
+                <label for="option1">Option A:</label>
+                <input type="text" id="option1">
+                <label for="option2">Option B:</label>
+                <input type="text" id="option2">
+                <label for="option3">Option C:</label>
+                <input type="text" id="option3">
+                <label for="option4">Option D:</label>
+                <input type="text" id="option4">
+                <label for="answer">Correct Answer (A, B, C, or D):</label>
+                <input type="text" id="answer">
+                <button onclick="addQuestion()" id="addQuestionButton">Add Question</button>
+                <button onclick="updateQuestion()" style="display: none;" id="updateButton">Update Question</button>
+            </div>
+            <div class="question-container" id="examinerQuestions" style="display: none;">
+                <h4>Questions Set Up</h4>
+                <ol id="questionsList"></ol>
+            </div>
+            <div class="student-scores" id="studentScoresContainer" style="display: none;">
+                <h4>Student Scores</h4>
+                <ul id="studentScores"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
